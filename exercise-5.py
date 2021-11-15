@@ -13,11 +13,19 @@
 
 # Hint: The next number is found by adding the two numbers before it
 
-def fibonacci(range):
-  if range<=1:
-    return range
-  else:
-    return fibonacci(range-1) + fibonacci(range-2)
+def fibonacci(number):
+  result=0
+  prev_result=0
+  for i in range(number):
+    if i == 0:
+      result = 1
+    elif i == 1:
+      result = 1
+    else:
+      prev_result=result-prev_result
+      result+=prev_result
+
+  return result 
 
 for i in range(50):
   print(f"term:{i} / number: {fibonacci(i)}")

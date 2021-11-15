@@ -10,3 +10,21 @@
 #      The dog's age in dog years is xx
 
 # Hint:  Use the int() function to convert the string returned from input() into an integer
+
+def dog_years(num):
+  if num<=2:
+    num=num*10
+  else:
+    num=20+((num-2)*7)
+  return (f"The dog's age in dog years is {num}")
+
+while True:
+  age=input("Input a dog's age in human years: ")
+
+  if age.isalpha():
+    print("Please only enter a number.")
+  else:
+    age=int(age)
+    break
+
+print(dog_years(age))

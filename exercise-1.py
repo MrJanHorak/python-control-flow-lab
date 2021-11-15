@@ -10,3 +10,20 @@
 
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
+
+vowels = ['a','o','i','e','u']
+
+def vowel_or_not(letter):
+  if letter in vowels:
+    print(f'The letter {letter} is a vowel')
+  else:
+    print(f'The letter {letter} is a consonant')
+
+while True:
+  letter= input('Please enter a letter: ')
+  if letter.isalpha():
+    break
+  else: 
+    print('You have to enter letters of the alphapbet only, no numbers please!')
+    
+vowel_or_not(letter)

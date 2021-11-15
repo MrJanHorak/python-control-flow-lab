@@ -12,3 +12,12 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+def fibonacci(range):
+  if range<=1:
+    return range
+  else:
+    return fibonacci(range-1) + fibonacci(range-2)
+
+for i in range(50):
+  print(f"term:{i} / number: {fibonacci(i)}")
